@@ -50,7 +50,7 @@ Get this project running locally in just a few steps:
 
 1.  **Clone the repository**
    ```bash
-   // Assuming you have git installed (git is not available in WebContainer)
+   // Assuming you have git installed 
    // git clone [repository-url]
    // cd [repository-directory]
    ```
