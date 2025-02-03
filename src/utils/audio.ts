@@ -32,4 +32,3 @@ export const setupBackgroundMusic = () => {
     bgMusic.play();
   }, { once: true });
 };
-
