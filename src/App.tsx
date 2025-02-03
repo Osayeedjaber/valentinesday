@@ -73,7 +73,7 @@ function App() {
     if (type === 'custom') {
       setCurrentPage('customDate');
     } else {
-      playAudio('congratulations'); // Play congratulations sound on date selection
+      playAudio('success'); // Play success sound on date selection
       sendDateWebhook(type);
     }
   };
@@ -109,11 +109,13 @@ function App() {
 
   // Handles submission of custom date text
   const handleCustomDateSubmit = () => {
+    playAudio('success'); // Play success sound on custom date submit
     sendDateWebhook('custom', customDateText);
   };
 
   // Handles the "No" button click, displays a message
   const handleNoClick = () => {
+    playAudio('congratulations'); // Play congratulations sound on "No" button click
     setNoClickMessage("Beep boop something wrong happened check with ur husband");
     setTimeout(() => setNoClickMessage(''), 3000);
   };
@@ -137,6 +139,7 @@ function App() {
       <div className="flex md:flex-row gap-4 justify-center items-center relative">
         <button
           onClick={() => {
+            playAudio('click'); // Play click sound on "Yes" button
             setShowConfetti(true);
             setTimeout(() => {
               setShowConfetti(false);
@@ -180,14 +183,20 @@ function App() {
       </p>
       {messageIndex < messages.length - 1 ? (
         <button
-          onClick={() => setMessageIndex(prev => prev + 1)}
+          onClick={() => {
+            playAudio('click'); // Play click sound on "Next" message
+            setMessageIndex(prev => prev + 1)
+          }}
           className="px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transform hover:scale-105 transition-all"
         >
           Next <ArrowRight className="inline ml-2" />
         </button>
       ) : (
         <button
-          onClick={() => setCurrentPage('date')}
+          onClick={() => {
+            playAudio('click'); // Play click sound on "Choose a Date"
+            setCurrentPage('date')
+          }}
           className="px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transform hover:scale-105 transition-all"
         >
           Choose a Date <Heart className="inline ml-2" />
@@ -204,7 +213,10 @@ function App() {
         {dateOptions.map((option) => (
           <button
             key={option.type}
-            onClick={() => handleDateSelection(option.type)}
+            onClick={() => {
+              playAudio('success'); // Play success sound on date option selection
+              handleDateSelection(option.type)
+            }}
             className="flex items-center gap-3 w-full px-6 py-4 bg-pink-100 hover:bg-pink-200 text-pink-700 rounded-xl transition-all transform hover:scale-102 hover:shadow-md"
           >
             {option.icon}
@@ -234,7 +246,10 @@ function App() {
         Send Message to Your Husband
       </button>
        <button
-          onClick={() => setCurrentPage('final')}
+          onClick={() => {
+            playAudio('click'); // Play click sound on "Next" after custom date
+            setCurrentPage('final')
+          }}
           className="mt-4 px-6 py-3 bg-pink-300 text-white rounded-full hover:bg-pink-400 transform hover:scale-105 transition-all"
         >
           Next
@@ -257,7 +272,10 @@ function App() {
       <p className="text-xl text-pink-500 mb-4">You've made my day special!</p>
       <div className="mt-8">
         <button
-          onClick={() => setCurrentPage('flower')}
+          onClick={() => {
+            playAudio('click'); // Play click sound on "Go to Flower Page"
+            setCurrentPage('flower')
+          }}
           className="px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transform hover:scale-105 transition-all"
         >
           Go to Flower Page <Heart className="inline ml-2" />
@@ -311,4 +329,3 @@ function App() {
 }
 
 export default App;
-

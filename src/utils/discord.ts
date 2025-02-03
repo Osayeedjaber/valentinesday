@@ -21,4 +21,3 @@ export const sendWebhookMessage = async (message: string) => {
     console.error('Error sending webhook:', error); // Log any errors during webhook sending
   }
 };
-

@@ -25,4 +25,3 @@ export const createConfetti = () => {
   document.body.appendChild(container); // Add container to body
   setTimeout(() => container.remove(), 3000); // Remove container after 3 seconds
 };
-

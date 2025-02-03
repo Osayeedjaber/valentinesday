@@ -19,4 +19,3 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ text }) => {
     </div>
   );
 };
-

@@ -71,4 +71,3 @@ const FlowerPage: React.FC = () => {
 };
 
 export default FlowerPage;
-
