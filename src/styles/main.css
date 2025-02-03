@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply min-h-screen bg-gradient-to-br from-pink-100 to-red-50;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  @apply max-w-4xl mx-auto p-4;
+}
+
+/* Button styles */
+.btn {
+  @apply px-6 py-3 rounded-full transition-all transform hover:scale-105;
+}
+
+.btn-primary {
+  @apply bg-pink-500 text-white hover:bg-pink-600;
+}
+
+.btn-success {
+  @apply bg-green-500 text-white hover:bg-green-600;
+}
+
+.btn-danger {
+  @apply bg-red-500 text-white hover:bg-red-600;
+}

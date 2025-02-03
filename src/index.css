@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keyframes for floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+/* Animation classes for floating effect with different delays */
+.animate-float-1 { animation: float 3s ease-in-out infinite; }
+.animate-float-2 { animation: float 4s ease-in-out infinite 0.5s; }
+.animate-float-3 { animation: float 5s ease-in-out infinite 1s; }
+.animate-float-4 { animation: float 4.5s ease-in-out infinite 1.5s; }
+.animate-float-5 { animation: float 3.5s ease-in-out infinite 2s; }
+.animate-float-6 { animation: float 4s ease-in-out infinite 2.5s; }
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for confetti animation */
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Animation classes for fade-in and fade-up effects */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out;
+}
+
+/* Animation class for confetti effect */
+.animate-confetti {
+  animation: confetti 2s ease-out forwards;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* Hover effects only for devices that support hover */
+@media (hover: hover) {
+  .transform {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hover\:scale-102:hover {
+    transform: scale(1.02);
+  }
+}

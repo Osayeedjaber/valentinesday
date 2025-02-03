@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #ec4899;
+  --color-primary-light: #fbcfe8;
+  --color-primary-dark: #be185d;
+  
+  --color-success: #22c55e;
+  --color-success-light: #bbf7d0;
+  --color-success-dark: #15803d;
+  
+  --color-danger: #ef4444;
+  --color-danger-light: #fecaca;
+  --color-danger-dark: #b91c1c;
+  
+  --gradient-primary: linear-gradient(to bottom right, #fce7f3, #ffe4e6);
+}

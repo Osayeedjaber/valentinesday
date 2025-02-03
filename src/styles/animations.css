@@ -1,0 +1,55 @@
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+.animate-float-1 { animation: float 3s ease-in-out infinite; }
+.animate-float-2 { animation: float 4s ease-in-out infinite 0.5s; }
+.animate-float-3 { animation: float 5s ease-in-out infinite 1s; }
+.animate-float-4 { animation: float 4.5s ease-in-out infinite 1.5s; }
+.animate-float-5 { animation: float 3.5s ease-in-out infinite 2s; }
+.animate-float-6 { animation: float 4s ease-in-out infinite 2.5s; }
+
+/* Fade animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Confetti animation */
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.animate-fade-in { animation: fadeIn 1s ease-in-out; }
+.animate-fade-up { animation: fadeUp 0.8s ease-out; }
+.animate-confetti { animation: confetti 2s ease-out forwards; }
