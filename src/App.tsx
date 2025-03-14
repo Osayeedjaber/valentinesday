@@ -55,7 +55,7 @@ function App() {
     "To be alive, and to get to spend this life with you",
     "Is so incredibly, unfathomably unlikely",
     "And yet here I am to get the impossible chance to get to know you",
-    "I love you so much Subaita, more than all the time and space in the universe can contain",
+    "I love you so much (someone), more than all the time and space in the universe can contain",
     "And I can't wait to spend all the time in the world to share that love with you!",
     "Happy Valentine's Day ❤️"
   ];
